@@ -682,7 +682,7 @@ li.social-links a {
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
-    padding: 120px 0;
+    padding: 150px 0;
     position: relative;
     width: 100%;
 }
@@ -714,6 +714,7 @@ li.social-links a {
     position: relative;
     overflow: hidden;
     padding: 120px 0;
+    
 }
 
 .noover {
@@ -746,6 +747,14 @@ li.social-links a {
 
 .section.color1 {
     background-color: #448AFF;
+}
+.hidden-sm img{
+    margin-top:40px;
+    height: 600px;
+    background-color: black;
+    /* transform: rotate(15deg); */
+    
+
 }
 
 .first-section {
@@ -972,7 +981,7 @@ li.social-links a {
 .logos img:hover {
     opacity: 0.5;
 }
-
+  
 .desc h3 i {
     color: #14bdee;
     font-size: 37px;
@@ -1535,7 +1544,7 @@ hr.invis1 {
 .customwidget ul {
     padding: 0;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .customwidget li i {
@@ -1547,12 +1556,15 @@ hr.invis1 {
     margin-right: 10px;
 }
 
+
 .image-center img {
     position: relative;
     margin: 0 0 -208px;
     z-index: 10;
     padding-right: 30px;
     text-align: center;
+    margin-bottom:1px;
+    
 }
 
 .customwidget p {
@@ -3319,7 +3331,7 @@ select.mobile-device {
 	display: block;
 	position: relative;
 	width: 100%;
-	background: #1e2434;
+	background:black;
 	padding-top: 94px;
 }
 .footer_background
