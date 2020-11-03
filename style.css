@@ -399,7 +399,8 @@ a img.aligncenter {
 }
 
 .social-box{
-	float: right;
+    /* float: right; */
+    margin-left: 200px;
 }
 
 .social-box ul li{
@@ -1344,7 +1345,11 @@ details{
 /*------------------------------------------------------------------
     MESSAGE BOXES
 -------------------------------------------------------------------*/
-
+.hd-program{
+    color: #384158;
+    font-weight: 900;
+    font-size: larger;
+}
 .service-widget h3 {
     font-size: 22px;
     color: #ffffff;
@@ -2962,7 +2967,7 @@ select.mobile-device {
 	position: relative;
 }
 .banner h2::after {
-    background: #fd6802;
+    background: #448AFF;
     content: "";
     height: 35px;
     left: -15px;
@@ -2984,10 +2989,10 @@ select.mobile-device {
 	font-weight: 500;
 }
 .page-title-link li a:hover {
-	color: #fd6802;
+	color: #448AFF;
 }
 .page-title-link li::after {
-    background: #fcbf02;
+    background: #448AFF;
     bottom: 8px;
     content: "";
     height: 2px;
@@ -3008,6 +3013,17 @@ select.mobile-device {
 	padding-bottom: 10px;
 	transition: all 1s ease-in-out;
 	margin-bottom: 30px;
+}
+.about-item h2{
+    color: #448AFF;
+    font-weight: bolder;
+
+}
+.about-item p{
+    color: black;
+}
+.about-item span{
+    color: #448AFF;
 }
 .about-icon{
 	padding: 20px 0px;
@@ -3099,7 +3115,28 @@ select.mobile-device {
     text-transform: uppercase;
     margin: 0;
 }
-
+.pricingTable .sub-title{
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.pricingTable .year{
+    width: 80px;
+    height: 55px;
+    background: #fff;
+    padding: 7px 0;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+	line-height: 20px;
+    color: var(--pricingTable-yellow);
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 1;
+}
 .pricingTable .year:before,
 .pricingTable .year:after{
     content: "";
