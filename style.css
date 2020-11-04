@@ -413,7 +413,13 @@ a img.aligncenter {
 	font-size: 20px;
 }
 .social-box ul li a:hover{
-	color: #fd6802;
+color: #fd6802;
+    
+    
+}
+.btn-lighte:hover{
+    background-color:#21759b;
+    color:white
 }
 
 
@@ -2856,7 +2862,12 @@ select.mobile-device {
     color: #ffffff;
 	box-shadow: 0 10px 20px 0 rgba(5, 16, 44, .15);
 	border-radius: 25px 0px 25px 0px;
-    background: #fd6802;
+    background:#fd6802;
+    font-size: bold;
+}
+.btn-lighte:hover{
+    color:white;
+
 }
 .btn-light {
     padding: 10px 30px;
