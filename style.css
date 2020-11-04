@@ -594,6 +594,7 @@ li.social-links a {
     transform: translateY(-50%);
     width: 100%;
     z-index: 1;
+
 }
 
 .slide-text h1 {
@@ -601,9 +602,9 @@ li.social-links a {
     font-size: 70px;
     font-weight: 700;
     text-transform: capitalize;
-	text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
-             0px 8px 10px rgba(0,0,0,0.1),
-             0px 18px 3px rgba(0,0,0,0.1);
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 10px rgba(0,0,0,0.4),
+             0px 18px 3px rgba(0,0,0,0.4);
 }
 
 .slide-text h1 span{
@@ -613,12 +614,15 @@ li.social-links a {
 
 .slide-text h2 {
     color: #fff;
-    font-size: 22px;
+    font-weight:500;
+    line-height: 1.38;
+    font-size: 26px;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    margin-top:30px;
 	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
+             0px 8px 13px rgba(0,0,0,0.4),
+             0px 18px 23px rgba(0,0,0,0.4l);
 }
 .slide-text a{
     color:white;
