@@ -24,3 +24,19 @@ window.onclick = function (event) {
   }
 };
 
+function submitStudentInfo() {
+   var LstName=document.getElementById("lastName")
+   console.log(LstName.value)
+   fetch ("http://127.0.0.1:8080/students", {
+    method: "GET",
+    headers: {
+      "Access-Control-Allow-Origin":"*", 
+
+      "Content-Type": "application/json"
+
+    },
+  })
+  .then(response =>response.json())
+  .then(data => console.log(data));
+
+}
