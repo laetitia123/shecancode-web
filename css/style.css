@@ -822,9 +822,13 @@ h6 {
   background-color: #0a77c0;
   color: white;
   border: none;
-  border: 5px;
+  border-radius: 5px;
   font-weight: 400;
   margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .input-text {
