@@ -24,19 +24,44 @@ window.onclick = function (event) {
   }
 };
 
+var form = document.getElementById("newStudentForm");
+function handleForm(event) {
+  event.preventDefault();
+}
+form.addEventListener("submit", handleForm);
+
 function submitStudentInfo() {
-   var LstName=document.getElementById("lastName")
-   console.log(LstName.value)
-   fetch ("http://127.0.0.1:8080/students", {
-    method: "GET",
-    headers: {
-      "Access-Control-Allow-Origin":"*", 
+  var data = {
+    name: `${document.getElementById("firstName").value} ${
+      document.getElementById("lastName").value
+    }`,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phoneNumber").value,
+    gender: document.querySelector('input[name="gender"]:checked').value,
+    programFee: document.querySelector('input[name="pay100k"]:checked').value,
+    district: document.getElementById("district").value,
+    location: document.getElementById("location").value,
+    education: document.getElementById("education").value,
+    ownAlaptop: document.querySelector('input[name="ownLaptop"]:checked').value,
+    careerGoals: document.getElementById("careerGoals").value,
+    inpersonoronline: document.querySelector('input[name="classType"]:checked')
+      .value,
+    howdidyouhearaboutus: document.getElementById("channel").value,
+    registrationFee: document.querySelector('input[name="pay10k"]:checked')
+      .value,
+    accessToInternet: document.querySelector(
+      'input[name="internetAccess"]:checked'
+    ).value,
+    scholarship: document.getElementById("whyYou").value,
+  };
 
-      "Content-Type": "application/json"
-
-    },
-  })
-  .then(response =>response.json())
-  .then(data => console.log(data));
-
+  //  fetch ("http://127.0.0.1:8080/students", {
+  //   method: "POST",
+  //   headers: {
+  //     "Access-Control-Allow-Origin":"*",
+  //     "Content-Type": "application/json"
+  //   },
+  // })
+  // .then(response =>response.json())
+  // .then(data => console.log(data));
 }
