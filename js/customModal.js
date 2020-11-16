@@ -55,13 +55,15 @@ function submitStudentInfo() {
     scholarship: document.getElementById("whyYou").value,
   };
 
-  //  fetch ("http://127.0.0.1:8080/students", {
-  //   method: "POST",
-  //   headers: {
-  //     "Access-Control-Allow-Origin":"*",
-  //     "Content-Type": "application/json"
-  //   },
-  // })
-  // .then(response =>response.json())
-  // .then(data => console.log(data));
+   fetch ("http://127.0.0.1:8080/student/add", {
+    method: "POST",
+    headers: {
+      "Access-Control-Allow-Origin":"*",
+      "Content-Type": "application/json"
+    },
+    body:JSON.stringify(data)
+  })
+  .then(response =>response.json())
+  .then(data => console.log(data))
+  // .catch(error=>console.log("error---->",error))
 }
