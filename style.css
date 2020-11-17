@@ -3008,26 +3008,26 @@ select.mobile-device {
 
 
 .about-item{
-	background: #ffffff;
+	background: #448AFF;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	padding-bottom: 10px;
 	transition: all 1s ease-in-out;
 	margin-bottom: 30px;
 }
 .about-item h2{
-    color: #448AFF;
+    color: #ffffff;
     font-weight: bolder;
 
 }
 .about-item p{
-    color: black;
+    color: #ffffff;
 }
 .about-item span{
-    color: #448AFF;
+    color: #FFFFFF;
 }
 .about-icon{
 	padding: 20px 0px;
-	transition: all 1s ease-in-out;
+	
 }
 .about-icon span{
 	font-size: 48px;
@@ -3048,12 +3048,12 @@ select.mobile-device {
 
 .about-item:hover .about-icon{
 	transform: rotate(-360deg);
-	transition: all 1s ease-in-out;
+	
 }
 
 .about-item:hover .about-icon span{
 	color: #fd6802;
-	transition: all 1s ease-in-out;
+	
 }
 
 
