@@ -30,7 +30,7 @@ function handleForm(event) {
 }
 form.addEventListener("submit", handleForm);
 
-function submitStudentInfo() {
+async function submitStudentInfo() {
   var data = {
     name: `${document.getElementById("firstName").value} ${
       document.getElementById("lastName").value
@@ -55,15 +55,18 @@ function submitStudentInfo() {
     scholarship: document.getElementById("whyYou").value,
   };
 
-   fetch ("http://127.0.0.1:8080/student/add", {
+   const response = await fetch ("http://127.0.0.1:3030/student/add", {
     method: "POST",
     headers: {
       "Access-Control-Allow-Origin":"*",
       "Content-Type": "application/json"
     },
     body:JSON.stringify(data)
-  })
-  .then(response =>response.json())
-  .then(data => console.log(data))
-  // .catch(error=>console.log("error---->",error))
+  });
+  if(response.status === 200){
+    modal.style.display = "none";
+    alert("Application submitted successfully");
+  }else{
+    alert("Application failed! Please your internet connectivity");
+  }
 }
