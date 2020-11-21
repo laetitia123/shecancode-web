@@ -185,34 +185,11 @@
 })(jQuery);
 
 
-// Applicants table
-function exportTableToExcel(tableID, filename = ''){
-    var downloadLink;
-    var dataType = 'application/vnd.ms-excel';
-    var tableSelect = document.getElementById(tableID);
-    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-    
-    // Specify file name
-    filename = filename?filename+'.xls':'excel_data.xls';
-    
-    // Create download link element
-    downloadLink = document.createElement("a");
-    
-    document.body.appendChild(downloadLink);
-    
-    if(navigator.msSaveOrOpenBlob){
-        var blob = new Blob(['\ufeff', tableHTML], {
-            type: dataType
-        });
-        navigator.msSaveOrOpenBlob( blob, filename);
-    }else{
-        // Create a link to the file
-        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-    
-        // Setting the file name
-        downloadLink.download = filename;
-        
-        //triggering the function
-        downloadLink.click();
-    }
-}
+function exportTableToExcel(elem) {
+    var table = document.getElementById("applicants-table");
+    var html = table.outerHTML;
+    var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+    elem.setAttribute("href", url);
+    elem.setAttribute("download", "sheCanCodeApplicants.xls"); // Choose the file name
+    return false;
+  }

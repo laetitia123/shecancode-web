@@ -266,10 +266,8 @@
                             <h2><b>SheCanCode</b> Application Management</h2>
                         </div>
                         <div class="col-sm-6">
-                            <a href="#" class="btn btn-secondary"><i class="material-icons">&#xE147;</i>
-                  <span>Add New Applicant</span></a
-                >
-                <a id="exp2exl" href="#" class="btn btn-secondary" onclick="exportTableToExcel('applicants-table')"
+                
+                <a id="exp2exl" href="#" class="btn btn-secondary" onclick="exportTableToExcel(this)"
                   ><i class="material-icons">&#xE24D;</i>
                   <span>Export to Excel</span></a
                 >
@@ -277,18 +275,15 @@
             </div>
           </div>
           <table class="table table-striped table-hover" id="applicants-table">
-
               <tr>
-                <th>#</th>
+                <th>S/N</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Gender</th>
                 <th>Class type</th>
                 <th>Location</th>
-                <th>Action</th>
               </tr>
-         
               <script language="javascript" type="text/javascript">
                 async function getStudents() {
                   const response = await fetch(
@@ -318,13 +313,12 @@
 
                 const addRows = (rows) => {
                   rows.forEach((e, index) => {
-                    const tbody = document.querySelector("#applicants-table");
+                    const customTable = document.querySelector("#applicants-table");
                     const tr = document.createElement("tr");
                     tr.innerHTML = rowHtml(e, index);
-                    tbody.appendChild(tr);
+                    customTable.appendChild(tr);
                   });
                 };
-
                 const rowHtml = (row, index) => {
                   html = "";
                   html += `<td>${index+1}</td><td><a href="#"> ${row.name}</a></td>
@@ -332,13 +326,10 @@
                             <td>${row.phoneNumber}</td>
                             <td>${row.gender}</td>
                             <td>${row.inpersonoronline}</td>
-                            <td>${row.district}</td>
-                            <td><a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a><a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a></td>`;
+                            <td>${row.district}</td>`;
                             return html; };
 
-                            </script>
-
-                            </tbody>
+                            </script>     
                             </table>
                             <div class="clearfix">
                                 <div class="hint-text">
