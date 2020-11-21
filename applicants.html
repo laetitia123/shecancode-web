@@ -269,7 +269,7 @@
                             <a href="#" class="btn btn-secondary"><i class="material-icons">&#xE147;</i>
                   <span>Add New Applicant</span></a
                 >
-                <a id="exp2exl" href="#" class="btn btn-secondary"
+                <a id="exp2exl" href="#" class="btn btn-secondary" onclick="exportTableToExcel('applicants-table')"
                   ><i class="material-icons">&#xE24D;</i>
                   <span>Export to Excel</span></a
                 >
@@ -277,7 +277,7 @@
             </div>
           </div>
           <table class="table table-striped table-hover" id="applicants-table">
-            <thead>
+
               <tr>
                 <th>#</th>
                 <th>Name</th>
@@ -288,8 +288,7 @@
                 <th>Location</th>
                 <th>Action</th>
               </tr>
-            </thead>
-            <tbody>
+         
               <script language="javascript" type="text/javascript">
                 async function getStudents() {
                   const response = await fetch(
@@ -337,17 +336,6 @@
                             <td><a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a><a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a></td>`;
                             return html; };
 
-
-
-
-
-
-
-
-
-
-
-
                             </script>
 
                             </tbody>
@@ -371,6 +359,7 @@
                         </div>
                     </div>
                 </div>
-</body>
+                <script src="js/custom.js"></script>
+
 
 </html>

@@ -1,6 +1,8 @@
 // Get the modal
 var modal = document.getElementById("myModal");
 
+var successModal = document.getElementById("success-modal");
+
 // Get the button that opens the modal
 var btn = document.getElementById("openModalBtn");
 
@@ -15,12 +17,14 @@ btn.onclick = function() {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
+    successModal.style.display="none"
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        successModal.style.display="none"
     }
 };
 
@@ -66,8 +70,9 @@ async function submitStudentInfo() {
     });
     if (response.status === 200) {
         modal.style.display = "none";
-        alert("Application submitted successfully");
+        successModal.style.display = "block";
     } else {
         alert("Application failed! Please your internet connectivity");
     }
+    $('#newStudentForm')[0].reset();
 }
