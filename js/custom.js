@@ -193,3 +193,42 @@ function exportTableToExcel(elem) {
     elem.setAttribute("download", "sheCanCodeApplicants.xls"); // Choose the file name
     return false;
   }
+
+  var accessForm = document.getElementById("signup-form");
+
+  function handleForm(event) {
+      event.preventDefault();
+  }
+  accessForm.addEventListener("submit", handleForm);
+   async  function createAccountApi (){
+   
+      var email =document.getElementById("email").value;
+      var userName =document.getElementById("userName").value;
+      var password =document.getElementById("password").value;
+       var  userData = {
+           name:userName,
+           email:email,
+           password:password
+       }
+      const response = await fetch("http://127.0.0.1:8080/auth/signUp", {
+        method: "POST",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+    });
+    if (response.status === 200) {
+        // modal.style.display = "none";
+        // successModal.style.display = "block";
+        alert("user created successful")
+    } else {
+        alert("Application failed! Please your internet connectivity");
+    }
+    $('#signup-form')[0].reset();
+  }
+
+ 
+
+  
+  

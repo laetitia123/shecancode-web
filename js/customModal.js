@@ -35,6 +35,15 @@ function handleForm(event) {
 }
 form.addEventListener("submit", handleForm);
 
+var accessForm = document.getElementById("signup-form");
+
+  function handleForm(event) {
+      event.preventDefault();
+  }
+  accessForm.addEventListener("submit", handleForm);
+
+
+
 async function submitStudentInfo() {
     var data = {
         name: `${document.getElementById("firstName").value} ${
