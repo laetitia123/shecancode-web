@@ -194,14 +194,14 @@ function exportTableToExcel(elem) {
     return false;
   }
 
-  var accessForm = document.getElementById("signup-form");
 
-  function handleForm(event) {
-      event.preventDefault();
-  }
-  accessForm.addEventListener("submit", handleForm);
+
+
    async  function createAccountApi (){
-   
+    $("form").on('submit', function(event){
+        event.preventDefault();
+    });
+
       var email =document.getElementById("email").value;
       var userName =document.getElementById("userName").value;
       var password =document.getElementById("password").value;
@@ -220,8 +220,8 @@ function exportTableToExcel(elem) {
     });
     if (response.status === 200) {
         // modal.style.display = "none";
-        // successModal.style.display = "block";
-        alert("user created successful")
+        successModal.style.display = "block";
+        // alert("user created successful")
     } else {
         alert("Application failed! Please your internet connectivity");
     }
