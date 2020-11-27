@@ -266,9 +266,8 @@
                             <h2><b>SheCanCode</b> Application Management</h2>
                         </div>
                         <div class="col-sm-6">
-                
-                <a id="exp2exl" href="#" class="btn btn-secondary" onclick="exportTableToExcel(this)"
-                  ><i class="material-icons">&#xE24D;</i>
+
+                            <a id="exp2exl" href="#" class="btn btn-secondary" onclick="exportTableToExcel(this)"><i class="material-icons">&#xE24D;</i>
                   <span>Export to Excel</span></a
                 >
               </div>
@@ -287,7 +286,7 @@
               <script language="javascript" type="text/javascript">
                 async function getStudents() {
                   const response = await fetch(
-                    "http://localhost:8080/students",
+                    "http://localhost:5050/students",
                     {
                       method: "GET",
                       headers: {
@@ -326,10 +325,9 @@
                             <td>${row.phoneNumber}</td>
                             <td>${row.gender}</td>
                             <td>${row.inpersonoronline}</td>
-                            <td>${row.district}</td>`;
-                            return html; };
+                            <td>${row.district}</td>`; return html; };
 
-                            </script>     
+                            </script>
                             </table>
                             <div class="clearfix">
                                 <div class="hint-text">

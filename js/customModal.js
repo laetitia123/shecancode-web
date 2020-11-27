@@ -69,7 +69,7 @@ async function submitStudentInfo() {
         scholarship: document.getElementById("whyYou").value,
     };
 
-    const response = await fetch("http://127.0.0.1:8080/student/add", {
+    const response = await fetch("http://127.0.0.1:5050/students/add", {
         method: "POST",
         headers: {
             "Access-Control-Allow-Origin": "*",

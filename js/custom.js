@@ -210,7 +210,7 @@ function exportTableToExcel(elem) {
            email:email,
            password:password
        }
-      const response = await fetch("http://127.0.0.1:8080/auth/signUp", {
+      const response = await fetch("http://127.0.0.1:5050/auth/signUp", {
         method: "POST",
         headers: {
             "Access-Control-Allow-Origin": "*",
