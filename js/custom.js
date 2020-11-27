@@ -215,6 +215,9 @@ span.onclick = function () {
 };
 
 async function createAccountApi() {
+  var btn = document.getElementById("new-account-btn");
+  btn.innerHTML = 'Creating...';
+  $('#new-account-btn').attr("disabled", true);  
   $("form").on("submit", function (event) {
     event.preventDefault();
   });
@@ -227,7 +230,7 @@ async function createAccountApi() {
     email: email,
     password: password,
   };
-  const response = await fetch("http://localhost:5050/api/auth/signup", {
+  const response = await fetch("https://shecancode-api.herokuapp.com/api/auth/signup", {
     method: "POST",
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -237,13 +240,20 @@ async function createAccountApi() {
   });
   if (response.status === 200) {
     successModal.style.display = "block";
+    $('#new-account-btn').attr("disabled", false);
+    btn.innerHTML = 'Create';
   } else {
     alert("Application failed!");
+    $('#new-account-btn').attr("disabled", false);
+    btn.innerHTML = 'Create';
   }
   $(".user-signup-form").reset();
 }
 
 async function loginApi() {
+  var btn = document.getElementById("login-btn");
+  btn.innerHTML = 'Authenticating...';
+  $('#login-btn').attr("disabled", true);  
   $("form").on("submit", function (event) {
     event.preventDefault();
   });
@@ -255,7 +265,7 @@ async function loginApi() {
     password: password,
   };
   console.log(userData);
-  const response = await fetch("http://localhost:5050/api/auth/signin", {
+  const response = await fetch("https://shecancode-api.herokuapp.com/api/auth/signin", {
     method: "POST",
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -264,12 +274,13 @@ async function loginApi() {
     body: JSON.stringify(userData),
   });
   const body = await response.json();
-  console.log("-----");
   if (response.status === 200) {
     sessionStorage.setItem("accessToken", body.accessToken);
     window.location.href = "applicants.html";
   } else {
     alert("Login failed!");
+    btn.innerHTML = 'Login';
+    $('#login-btn').attr("disabled", false); 
   }
   $(".user-signup-form").reset();
 }
