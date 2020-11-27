@@ -23,16 +23,16 @@
     <div class="login-page">
       <div class="form">
         <form class="user-form" id="user-signup-form">
-          <input type="text" placeholder="User Name" id="userName" />
-          <input type="password" placeholder="Password" id="password" />
+          <input type="text" required placeholder="User Name" id="userName" />
+          <input type="password" required placeholder="Password" id="password" />
           <input type="email" required placeholder="Email" id="email" />
           <button onclick="createAccountApi()">Create</button>
           <p class="message">Already Registered? <a href="#">Login</a></p>
         </form>
         <form class="user-form" id="user-login-form">
-          <input type="text" placeholder="UserName" />
-          <input type="password" placeholder="Password" />
-          <button>Login</button>
+          <input type="text" placeholder="UserName" required id="login-username" />
+          <input type="password" placeholder="Password" required id="login-password" />
+          <button onclick="loginApi()">Login</button>
           <p class="message">Not Registered? <a href="#">Register</a></p>
         </form>
       </div>

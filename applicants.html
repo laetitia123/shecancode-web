@@ -235,7 +235,13 @@
 </head>
 
 <body>
-    <div class="top-bar">
+    <script language="javascript" type="text/javascript">
+    let adminToken = sessionStorage.getItem('accessToken');
+    if(!adminToken){
+        window.location.href = "index.html";
+    }
+    </script>
+    <div class="top-bar" id="demo">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-sm-6">
@@ -249,7 +255,7 @@
                     <div class="right-top">
                         <div class="social-box">
                             <ul>
-                                <li><a class="button btn btn-brd" href="/">logout</a></li>
+                                <li><a class="button btn btn-brd" onclick="logout()">logout</a></li>
                                 <ul>
                         </div>
                     </div>
@@ -351,4 +357,5 @@
                 <script src="js/custom.js"></script>
 
 
+</body>
 </html>
