@@ -576,8 +576,6 @@ li.social-links a {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 100%;
-    height: 50%; */
 }
 
 .slider-bg-two {
@@ -784,7 +782,9 @@ li.social-links a {
 }
 
 .section.wb {
-    background-color: #ffffff;
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0.9;
 }
 
 .section.lb {
@@ -840,9 +840,10 @@ li.social-links a {
 }
 
 .section-title p {
-    color: #999;
+    padding: 5 30px;
+    color: #003049;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 28px;
     line-height: 33px;
     margin: 0;
 }
@@ -1360,9 +1361,17 @@ details {
 -------------------------------------------------------------------*/
 
 .hd-program {
-    color: #384158;
-    font-weight: 900;
-    font-size: larger;
+    font-weight: 200 !important;
+    color: #0077b6;
+    font-family: serif;
+    font-size: 28px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-style: bold;
 }
 
 .service-widget h3 {
@@ -2966,6 +2975,7 @@ select.mobile-device {
     background-size: cover;
     position: relative;
     z-index: 0;
+    justify-content: center;
 }
 
 .banner-bg-1::before {
@@ -2985,28 +2995,20 @@ select.mobile-device {
 }
 
 .banner h2 {
-    color: #f1f1f1;
-    font-size: 45px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    color: #333;
+    font-size: 145px;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-left: 20px;
-    position: relative;
 }
 
-.banner h2::after {
-    background: #448AFF;
-    content: "";
-    height: 35px;
-    left: -15px;
-    position: absolute;
-    top: 8px;
-    width: 6px;
-}
 
-.page-title-link li {
+/* .page-title-link li {
     display: inline-block;
     position: relative;
-}
+} */
 
 .page-title-link li a {
     color: #fff;
@@ -3041,9 +3043,15 @@ select.mobile-device {
     background: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding-bottom: 10px;
-    transition: all 1s ease-in-out;
+    /* transition: all 1s ease-in-out; */
     margin-bottom: 30px;
 }
+
+
+/* .col-sm-6 {
+    border: solid red;
+    width: 30%;
+} */
 
 .about-item h2 {
     color: #448AFF;
@@ -3066,6 +3074,17 @@ select.mobile-device {
 .about-icon span {
     font-size: 48px;
     color: #393939;
+}
+
+.about-text {
+    /* justify-content: first baseline; */
+    width: 30vh;
+    height: 40vh;
+}
+
+.about-text p {
+    font-size: 25px;
+    color: #003049;
 }
 
 .about-text h3 {
