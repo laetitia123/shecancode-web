@@ -83,12 +83,12 @@ body {
 
 .video {
     float: right;
-    margin: 50px;
+    margin: 30px;
     padding-top: 100px;
 }
 
 #cases {
-    border: red solid;
+    /* border: red solid; */
     padding: 15px;
 }
 
@@ -97,13 +97,13 @@ h2 {
     color: red;
     padding: 10px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
-.section-header h2 {
+*/ .section-header h2 {
     font-size: 40px;
     margin: 10px 0;
 }
@@ -131,6 +131,21 @@ h2 {
 
 .cases img:hover {
     opacity: 0.7;
+}
+
+.result-page {
+    color: white;
+    font-size: var(--size-p);
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    font-size: 4rem;
+}
+
+.result-page h2 {
+    color: turquoise;
 }
 
 
@@ -709,9 +724,22 @@ h6 {
 --------------------------------*/
 
 #services {
+    display: flex;
     margin-top: 100px;
     border: springgreen solid;
     /* padding: 60px 0 40px 0; */
+}
+
+#services p {
+    color: red;
+    font-size: var(--size-p);
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #services .box {
