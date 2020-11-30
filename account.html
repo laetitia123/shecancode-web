@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+    <title>SignUp and Logins</title>
+  </head>
+
+  <body>
+    <!-- The Modal -->
+    <div id="success-modal" class="modal">
+      <!-- Modal content -->
+      <div class="success-modal-content">
+        <span class="close">&times;</span>
+        <div class="success-modal-body">
+          <p>Account created successfully!</p>
+        </div>
+      </div>
+    </div>
+    <div class="login-page">
+      <div class="form">
+        <form class="user-form" id="user-signup-form">
+          <input type="text" placeholder="User Name" id="userName" />
+          <input type="password" placeholder="Password" id="password" />
+          <input type="email" required placeholder="Email" id="email" />
+          <button onclick="createAccountApi()">Create</button>
+          <p class="message">Already Registered? <a href="#">Login</a></p>
+        </form>
+        <form class="user-form" id="user-login-form">
+          <input type="text" placeholder="UserName" />
+          <input type="password" placeholder="Password" />
+          <button>Login</button>
+          <p class="message">Not Registered? <a href="#">Register</a></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js
+    "></script>
+
+    <script src="./js/custom.js"></script>
+        <!-- MODAL JS -->
+        <script src="js/customModal.js"></script>
+  </body>
+</html>

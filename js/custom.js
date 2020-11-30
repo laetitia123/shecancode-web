@@ -183,3 +183,52 @@
     });
 
 })(jQuery);
+
+
+function exportTableToExcel(elem) {
+    var table = document.getElementById("applicants-table");
+    var html = table.outerHTML;
+    var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+    elem.setAttribute("href", url);
+    elem.setAttribute("download", "sheCanCodeApplicants.xls"); // Choose the file name
+    return false;
+  }
+
+
+
+
+   async  function createAccountApi (){
+    $("form").on('submit', function(event){
+        event.preventDefault();
+    });
+
+      var email =document.getElementById("email").value;
+      var userName =document.getElementById("userName").value;
+      var password =document.getElementById("password").value;
+       var  userData = {
+           name:userName,
+           email:email,
+           password:password
+       }
+      const response = await fetch("http://127.0.0.1:5050/auth/signUp", {
+        method: "POST",
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+    });
+    if (response.status === 200) {
+        // modal.style.display = "none";
+        successModal.style.display = "block";
+        // alert("user created successful")
+    } else {
+        alert("Application failed! Please your internet connectivity");
+    }
+    $('#signup-form')[0].reset();
+  }
+
+ 
+
+  
+  

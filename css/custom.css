@@ -1,2 +1,54 @@
-
 /** ADD YOUR AWESOME CODES HERE **/
+
+#myModal {
+  display: none;
+}
+
+#success-modal {
+  display: none;
+}
+
+
+
+/* Modal Body */
+.success-modal-body {
+  padding: 2px 16px;
+  text-align: center;
+  background-color: #1bc41b63;
+  margin: 20px;
+  color: #005300;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+.close{
+    padding: 3px
+}
+
+/* Modal Footer */
+
+
+/* Modal Content */
+.success-modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.575), 0 6px 20px 0 rgba(0, 0, 0, 0.575);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
