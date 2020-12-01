@@ -43,3 +43,29 @@ select {
     
     width: 100%;
 }
+.shecancode-flex {
+  padding-top: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.shecancode-flex p {
+  display: block;
+  color: #264653;
+  font-size: 1.5em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.shecancode-flex h1 {
+  text-align: center;
+}
+.shecancode-flex>div {
+  width: 100%;
+  padding: 0;
+}
+.video{
+  margin-left: 0;
+}

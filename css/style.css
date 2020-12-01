@@ -42,13 +42,14 @@ body {
     padding-top: 10px 5px;
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     height: 100%;
 }
 
 .shecancode-flex>div {
     padding: 20px;
+    width: 40%;
 }
 
 .shecancode-flex h1 {
@@ -66,6 +67,7 @@ body {
     /* font-weight: bold; */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
+    /* width: 60%; */
 }
 
 .headings {
@@ -729,14 +731,14 @@ h6 {
 }
 
 #services p {
-    color: red;
+    /* color: red; */
     font-size: var(--size-p);
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.38;
     letter-spacing: normal;
-    font-size: 2rem;
+    font-size: 17px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -1935,6 +1937,13 @@ form button:hover {
     background: #2B4141;
     color: #34E4EA;
 }
+iframe, object, embed {
+    max-width: 100%;
+  }
+  
+  video{
+      width: 30%;
+  }
 
 
 /* .form .signp-form {
