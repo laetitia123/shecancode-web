@@ -37,41 +37,35 @@ body {
     padding: 30px;
 }
 
-.whychosing-us {
-    margin-left: 100px;
-    float: left;
-    width: 50.3%;
-    padding: 50px;
-    /* text-align: center; */
+.shecancode-flex {
+    border: solid red;
+    padding-top: 10px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
 }
 
-#why-shecancode {
-    background: rgba(68, 68, 68, 0.062);
-    margin: 20px;
-    /* border: teal solid 5px; */
-    height: 65vh;
+.shecancode-flex>div {
+    padding: 20px;
 }
 
-.whychosing-us h1 {
-    color: #003049;
-    /* padding: 0 0 0 15px; */
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.shecancode-flex h1 {
+    padding: 0 20px;
+    text-align: left;
     font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.7rem;
+    margin-bottom: 15px;
 }
 
-.whychosing-us p {
+.shecancode-flex p {
+    padding: 0 20px;
     display: block;
     color: #264653;
     font-size: 1.5em;
     /* font-weight: bold; */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
 }
 
 .headings {
@@ -93,24 +87,27 @@ body {
     padding: 15px;
 }
 
-.section-headers h4,
-h2 {
-    color: red;
-    padding: 10px;
+.section-headers {
+    padding: 30px;
     display: flex;
-    align-items: baseline;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-*/ .section-header h2 {
-    font-size: 40px;
+.section-headers h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.section-headers p {
+    font-size: 20px;
     margin: 10px 0;
 }
 
 .section-padding {
-    padding: 20px 20px 40px;
+    padding: 20px 20px 10px;
 }
 
 .flex-grid .row {
