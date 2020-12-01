@@ -30,6 +30,7 @@
 <!-- <services css> -->
 <link href="css/style.css" rel="stylesheet">
 <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="./css/mobile.css" media="(max-width: 768px)" rel="stylesheet" type="text/css" />
 
 
 
@@ -199,14 +200,20 @@
     <main>
         <section id="why-shecancode" class="shecancoderwanda">
             <div class="shecancode-flex">
+                <div class="shecancode-flex-row">
+                    <div class="paragraph-container">
+                        <h1>Why Choosing SheCan<span style="color:#14bdee;">Code</span>?</h1>
+                        <h1 class="headings">1.Course & Curriculum</h1>
+                        <p>Our curriculum designed to equipe our student with skills and knowledge that meets current tech indstury demands.Our courses are designed to ensures that you are tought modern, in demand software development and web skills in collaborative
+                            environment
+
+                        </p>
+                    </div>
+                    <div class="video">
+                        <iframe width="400px" height="300px" class="shecancode-vido" src="https://www.youtube.com/embed/aoiI6p1XxW0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
                 <div>
-                    <h1>Why Choosing SheCan<span style="color:#14bdee;">Code</span>?</h1>
-
-                    <h1 class="headings">1.Course & Curriculum</h1>
-                    <p>Our curriculum designed to equipe our student with skills and knowledge that meets current tech indstury demands.Our courses are designed to ensures that you are tought modern, in demand software development and web skills in collaborative
-                        environment
-
-                    </p>
                     <h1 class="headings">2.Employment Support</h1>
                     <p>Our career support makes sure students are supported to get employment during or after the graduation from the program. During the program, students are taught technical and soft skills so they can complete to the job market.SheCan
                         <span style="color:#14bdee;">Code</span> makes sure that graduates are able to apply skills learned during the program. SheCan<span style="color:#14bdee;">Code</span> partners with tech companies and tech women leaders to mentor,
@@ -214,11 +221,10 @@
                     </p>
                 </div>
 
+            </div>
 
 
-                <div class="video">
-                    <iframe class="shecancode-vido" width="660" height="315" src="https://www.youtube.com/embed/aoiI6p1XxW0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+
             </div>
         </section>
 
@@ -614,6 +620,7 @@
                                         </div>
                                         <button onclick="submitStudentInfo()" class="btn-long">Submit</button>
                                     </div>
+                                    <button onclick="submitStudentInfo()" class="btn-long" id="btn-submit-application">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -639,7 +646,7 @@
             <div class="container">
                 <div class="section-title text-center">
                     <h3>Testimonials</h3>
-                    <p class="lead">We thanks for all our awesome testimonials! There are hundreds of our happy customers!
+                    <p class="lead">We thank for all our awesome testimonials! There are hundreds of our happy customers!
                         <br>Let's see what others say about GoodWEB Solutions website template!</p>
                 </div>
                 <!-- end title -->
@@ -845,6 +852,8 @@
                                             <!-- <li><a href="#">Events</a></li>
                                             <li><a href="#">Gallery</a></li>
                                             <li><a href="#">FAQs</a></li> -->
+                                            <li><a href="#">FAQs</a></li>
+                                            <li><a href="account.html">Admin login</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -2381,7 +2381,7 @@ select.mobile-device {
     color: #fd6802;
     margin: 0 !important;
     padding: 0 !important;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 .stat-wrap p {
@@ -2390,7 +2390,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 700;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 #preloader {

@@ -44,7 +44,11 @@ var accessForm = document.getElementById("signup-form");
 
 
 
-async function submitStudentInfo() {
+async function submitStudentInfo(e) {
+    var btn = document.getElementById("btn-submit-application");
+    btn.innerHTML = 'Submitting...';
+    $('#btn-submit-application').attr("disabled", true);   
+
     var data = {
         name: `${document.getElementById("firstName").value} ${
       document.getElementById("lastName").value
@@ -69,7 +73,7 @@ async function submitStudentInfo() {
         scholarship: document.getElementById("whyYou").value,
     };
 
-    const response = await fetch("http://127.0.0.1:5050/students/add", {
+    const response = await fetch("https://shecancode-api.herokuapp.com/students/add", {
         method: "POST",
         headers: {
             "Access-Control-Allow-Origin": "*",
