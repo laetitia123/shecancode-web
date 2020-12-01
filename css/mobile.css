@@ -1,0 +1,45 @@
+/* For mobile phones: */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+}
+.form-input-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+.form-column-I {
+  width: 100%;
+}
+.form-column-II {
+  width: 100%;
+}
+.form-column-III {
+  width: 100%;
+}
+#services .title {
+  text-align: center;
+}
+select {
+  width: 100%;
+}
+.login-page {
+    width: 100%;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    padding: 45px;
+    text-align: center;
+}
+.table-container .table-title{
+    
+    width: 100%;
+}
