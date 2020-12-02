@@ -20,7 +20,7 @@ body {
 /* INNOCENT'S CCSS */
 
 .slide-text {
-    border: yellow solid 10px;
+    border: #14bdee solid 10px;
 }
 
 .section-bg {
@@ -54,10 +54,18 @@ body {
 
 .video {
     width: 40%;
+    border: solid yellow;
 }
 
 .paragraph-container {
-    width: 60%;
+    width: 70%;
+    border: solid red;
+    padding: 30px;
+}
+
+.paragraph-container2 {
+    border: skyblue solid;
+    padding: 1px;
 }
 
 .shecancode-flex>div {
@@ -97,12 +105,13 @@ body {
 }
 
 #cases {
-    /* border: red solid; */
-    padding: 15px;
+    border: red solid;
+    /* padding: 15px; */
 }
 
 .section-headers {
-    padding: 30px;
+    border: turquoise solid;
+    /* padding: 30px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,14 +119,38 @@ body {
     text-align: center;
 }
 
+
+/* .section-header h2 p {
+    height: 20vh;
+} */
+
 .section-headers h2 {
-    font-size: 30px;
-    margin: 10px 0;
+    /* font-size: 30px;
+    margin: 10px 0; */
+    padding-top: 30px;
+    text-align: center;
+    font-Size: 34px;
+    line-height: 1.47;
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0px;
+    font-style: normal;
 }
 
 .section-headers p {
-    font-size: 20px;
+    text-align: center;
+    --fontSize: 34;
+    line-height: 1.47;
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0px;
+    font-style: normal;
+    font-size: 30px;
     margin: 10px 0;
+    color: #1f1f1f;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .section-padding {
@@ -131,15 +164,17 @@ body {
 }
 
 .flex-grid .column {
-    flex: 30%;
+    flex: 40%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 0 1px;
 }
 
 .cases img {
-    width: 99%;
-    height: 45%;
+    width: 100%;
+    height: 50%;
 }
+
+.row {}
 
 .cases img:hover {
     opacity: 0.7;
@@ -153,12 +188,23 @@ body {
     font-style: normal;
     line-height: 1.38;
     letter-spacing: normal;
-    font-size: 4rem;
+    font-size: 20px;
 }
 
 .result-page h2 {
-    color: turquoise;
+    color: #ffffff;
+    font-family: "Fira Sans", "MS Serif", "New York", sans-serif;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    line-height: 26px;
+    font-weight: 400;
 }
+
+.horizonal-line {}
 
 
 /* end-of-Innocent's styling */
