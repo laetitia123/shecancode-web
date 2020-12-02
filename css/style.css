@@ -37,8 +37,7 @@ body {
 }
 
 .shecancode-flex {
-    border: solid red;
-    padding-top: 10px 5px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -54,12 +53,10 @@ body {
 
 .video {
     width: 40%;
-    border: solid yellow;
 }
 
 .paragraph-container {
     width: 70%;
-    border: solid red;
     padding: 30px;
 }
 
@@ -84,7 +81,7 @@ body {
     padding: 0 20px;
     display: block;
     color: #264653;
-    font-size: 1.5em;
+    font-size: 17px;
     /* font-weight: bold; */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
@@ -105,12 +102,12 @@ body {
 }
 
 #cases {
-    border: red solid;
+    /* border: red solid; */
     /* padding: 15px; */
 }
 
 .section-headers {
-    border: turquoise solid;
+    /* border: turquoise solid; */
     /* padding: 30px; */
     display: flex;
     flex-direction: column;
