@@ -210,9 +210,9 @@ function exportTableToExcel(elem) {
   return false;
 }
 
-span.onclick = function () {
-  successModal.style.display = "none";
-};
+// span.onclick = function () {
+//   successModal.style.display = "none";
+// };
 
 async function createAccountApi() {
   var btn = document.getElementById("new-account-btn");
@@ -289,3 +289,33 @@ function logout(){
     sessionStorage.removeItem('accessToken');
     window.location.href = "index.html";
 }
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+var successModal = document.getElementById("success-modal");
+
+// Get the button that opens the modal
+
+var btn4 = document.getElementById("openModalBtn4");
+var btn5 = document.getElementById("openModalBtn5");
+
+// Get the <span> element that closes the modal
+var userModalClose = document.getElementById("closeModal");
+var userModalResponseClose = document.getElementById("closeResponse");
+
+
+btn4.onclick = function() {
+    modal.style.display = "block";
+};
+btn5.onclick = function() {
+    modal.style.display = "block";
+};
+
+// When the user clicks on <userModalClose> (x), close the modal
+userModalClose.onclick = function() {
+    modal.style.display = "none";
+};
+userModalResponseClose.onclick = function() {
+    successModal.style.display="none"
+};
