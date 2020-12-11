@@ -5,18 +5,33 @@ var successModal = document.getElementById("success-modal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("openModalBtn");
+var btn1 = document.getElementById("openModalBtn1");
+var btn2 = document.getElementById("openModalBtn2");
+var btn3 = document.getElementById("openModalBtn3");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var userModalClose = document.getElementById("closeModal");
+var userModalResponseClose = document.getElementById("closeResponse");
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
     modal.style.display = "block";
 };
+btn1.onclick = function() {
+    modal.style.display = "block";
+};
+btn2.onclick = function() {
+    modal.style.display = "block";
+};
+btn3.onclick = function() {
+    modal.style.display = "block";
+};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+// When the user clicks on <userModalClose> (x), close the modal
+userModalClose.onclick = function() {
     modal.style.display = "none";
+};
+userModalResponseClose.onclick = function() {
     successModal.style.display="none"
 };
 
