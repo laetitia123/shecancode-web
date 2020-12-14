@@ -266,6 +266,7 @@ async function loginApi() {
   };
   console.log(userData);
   const response = await fetch("https://shecancode-api.herokuapp.com/api/auth/signin", {
+    // const response = await fetch("http://localhost:8080/api/auth/signin", {
     method: "POST",
     headers: {
       "Access-Control-Allow-Origin": "*",
@@ -318,4 +319,14 @@ userModalClose.onclick = function() {
 };
 userModalResponseClose.onclick = function() {
     successModal.style.display="none"
+};
+
+function parseJwt (token) {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+
+  return JSON.parse(jsonPayload);
 };
