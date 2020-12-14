@@ -289,6 +289,12 @@
                 <th>Gender</th>
                 <th>Class type</th>
                 <th>Location</th>
+                <th>Career goals</th>
+                <th>Scholarship use</th>
+                <th>Own Laptop</th>
+                <th>Access to internet</th>
+                <th>Program fee</th>
+                <th>Registration fee</th>
               </tr>
               <script language="javascript" type="text/javascript">
                 async function getStudents() {
@@ -332,10 +338,20 @@
                             <td>${row.phoneNumber}</td>
                             <td>${row.gender}</td>
                             <td>${row.inpersonoronline}</td>
-                            <td>${row.district}</td>`; return html; };
+                            <td>${row.district}</td>
+                            <td>${row.careerGoals}</td>
+                            <td>${row.scholarship}</td>
+                            <td>${row.ownAlaptop}</td>
+                            <td>${row.accessToInternet}</td>
+                            <td>${row.programFee}</td>
+                            <td>${row.registrationFee}</td>
+                            `
+                            
+                            ; return html; };
 
                             </script>
                             </table>
+
                             <div class="clearfix">
                                 <div class="hint-text">
                                     Showing <b>5</b> out of <b>25</b> entries
