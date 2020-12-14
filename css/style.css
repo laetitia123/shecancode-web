@@ -781,7 +781,7 @@ h6 {
 #services {
     display: flex;
     margin-top: 100px;
-    border: springgreen solid;
+    /* border: springgreen solid; */
     /* padding: 60px 0 40px 0; */
 }
 

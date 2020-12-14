@@ -1419,7 +1419,7 @@ details {
 
 .message-boxe h1 {
     text-transform: uppercase;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-left: 20px;
     margin: 0 0 5px;
     font-weight: 600;
@@ -1437,6 +1437,7 @@ details {
 }
 
 .message-boxe p {
+    /* padding-top: 50px; */
     margin-bottom: 20px;
     margin-left: 20px;
     color: #384158;
@@ -1454,14 +1455,16 @@ details {
 
 .post-mediaa {
     position: relative;
-    border-bottom: 30px solid #ebf1fa;
+    padding-top: 100px;
+    /* border-bottom: 30px solid #ebf1fa;
     border-top: 30px solid #ebf1fa;
-    border-right: 50px solid #ebf1fa;
+    border-right: 50px solid #ebf1fa; */
     /* border-width: 1px 2em 0 4rem; */
 }
 
 .post-media img {
     width: 100%;
+    height: 100%;
 }
 
 .playbutton {
