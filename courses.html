@@ -37,6 +37,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
 <body>
@@ -351,67 +352,6 @@
     <div id="about" class="section wb">
         <div class="container">
             <div class="section-title text-center">
-                <h3 class="hd-program">SheCan<span style="color:#14bdee;">Code</span> Preparation(Preps)</h3>
-                <p class="lead">Prep focuses on teaching you founamentals of software development skills. This is good program for high school, univeristy graduates or anyone who want career change and with passione for become software developer. Prep is designed for
-                    everyone with little or without coding experience</p>
-
-            </div>
-            <div class="row text-center">
-                <h3 class="hd-program" style="color: #073b4c;font: 1.9em sans-serif;padding-top: 14px;">Preps:Software Fundamentals </h3>
-                <div class="col-md-4 col-sm-6">
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <h2>Timeline</h2>
-                        </div>
-                        <div class="about-text">
-
-                            <p style="color: #003049; font-size: 22px;">12th October- 12th November 2020:<span><b>application </b></span></p>
-                            <p style="color: #003049; font-size: 22px;">12th November- 12th January 2020:<span><b>Classes </b></span></p>
-                            <p style="color: #003049; font-size: 22px;">20th February 2020:<span><b>Graduation</b></span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <h2>Languages and Tools</h2>
-                        </div>
-                        <div class="about-text ">
-
-                            <p>HTML </p>
-                            <p>CSS</p>
-                            <p>JS</p>
-                            <p>Github and Bash</p>
-                            <p>React Boostrap</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="about-item">
-                        <div class="about-icon">
-                            <h2>Expections After Program</h2>
-                        </div>
-                        <div class="about-text">
-                            <p style="color: #003049; font-size: 20px;">Able to build a person portfolio </p>
-                            <p style="color: #003049; font-size: 20px;">Able to build a static website</p>
-                            <p style="color: #003049; font-size: 20px;">Able to collaborate on Github</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="text-center">
-                <a id="openModalBtn4" href="#" class="btn btn-light btn-radius btn-brd">Apply Now--- </a>
-            </div>
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end section -->
-
-    <div id="services" class="parallax section lb">
-        <div class="container">
-            <div class="section-title text-center">
                 <h3 class="hd-program">SheCan<span style="color:#14bdee;">Code</span> Advanced</h3>
                 <h3 class="hd-program">Core Program</h3>
                 <p class="lead">After understanding the software fundumentals, core program takes to the stage which you learn advanced concepts and tools.This is 15 weeks intensive program.At this level, learns learn how to build web applications, website and mobile
@@ -610,6 +550,33 @@
         <script src="js/custom.js"></script>
         <script src="js/portfolio.js"></script>
         <script src="js/hoverdir.js"></script>
+        <script anguage="javascript" type="text/javascript">
+            // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    var successModal = document.getElementById("success-modal");
+    
+    // Get the button that opens the modal
+    
+    
+    var btn5 = document.getElementById("openModalBtn5");
+    
+    // Get the <span> element that closes the modal
+    var userModalClose = document.getElementById("closeModal");
+    var userModalResponseClose = document.getElementById("closeResponse");
+    
+    btn5.onclick = function() {
+        modal.style.display = "block";
+    };
+    
+    // When the user clicks on <userModalClose> (x), close the modal
+    userModalClose.onclick = function() {
+        modal.style.display = "none";
+    };
+    userModalResponseClose.onclick = function() {
+        successModal.style.display="none"
+    };
+        </script>
 
 </body>
 
