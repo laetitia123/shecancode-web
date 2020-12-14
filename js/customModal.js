@@ -12,6 +12,7 @@ var btn3 = document.getElementById("openModalBtn3");
 // Get the <span> element that closes the modal
 var userModalClose = document.getElementById("closeModal");
 var userModalResponseClose = document.getElementById("closeResponse");
+var userModalResponseCloseX = document.getElementById("close-x");
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
