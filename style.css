@@ -3498,11 +3498,15 @@ select.mobile-device {
 }
 
 .address-item {
-    float: left;
     margin: 0 11px;
     padding: 0px 15px;
-    width: 31%;
+    width: 100%;
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+.my-flex-row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
 }
 
 .address-icon {
