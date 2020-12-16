@@ -43,11 +43,13 @@
         }
         
         .table-wrapper {
-            min-width: 1000px;
+            /* min-width: 1000px; */
+            width: max-content;
             background: #fff;
             padding: 20px 25px;
             border-radius: 3px;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+            margin: 0 auto;
         }
         
         .table-title {
@@ -299,12 +301,6 @@
                 <th>Gender</th>
                 <th>Class type</th>
                 <th>Location</th>
-                <th>Career goals</th>
-                <th>Scholarship use</th>
-                <th>Own Laptop</th>
-                <th>Access to internet</th>
-                <th>Program fee</th>
-                <th>Registration fee</th>
               </tr>
               <script language="javascript" type="text/javascript">
                 async function getStudents() {
@@ -342,6 +338,12 @@
                   });
                 };
                 const rowHtml = (row, index) => {
+                 careerGoals = row.careerGoals.length>20?
+                                row.careerGoals.substr(0,20)+'...':
+                                row.careerGoals
+                 scholarship = row.scholarship.length>20?
+                                row.scholarship.substr(0,20)+'...':
+                                row.scholarship             
                   html = "";
                   html += `<td>${index+1}</td><td><a href="#"> ${row.name}</a></td>
                             <td>${row.email}</td>
@@ -349,12 +351,6 @@
                             <td>${row.gender}</td>
                             <td>${row.inpersonoronline}</td>
                             <td>${row.district}</td>
-                            <td>${row.careerGoals}</td>
-                            <td>${row.scholarship}</td>
-                            <td>${row.ownAlaptop}</td>
-                            <td>${row.accessToInternet}</td>
-                            <td>${row.programFee}</td>
-                            <td>${row.registrationFee}</td>
                             `
                             
                             ; return html; };
@@ -363,9 +359,9 @@
                             </table>
 
                             <div class="clearfix">
-                                <div class="hint-text">
+                                <!-- <div class="hint-text">
                                     Showing <b>5</b> out of <b>25</b> entries
-                                </div>
+                                </div> -->
                                 <ul class="pagination">
                                     <li class="page-item disabled"><a href="#">Previous</a></li>
                                     <li class="page-item active">
@@ -381,6 +377,74 @@
                         </div>
                     </div>
                 </div>
+                    <table class="table table-striped table-hover table-responsive" id="applicants-table-hidden">
+                      <tr>
+                        <th>S/N</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Gender</th>
+                        <th>Class type</th>
+                        <th>Location</th>
+                        <th>Career goals</th>
+                        <th>Scholarship use</th>
+                        <th>Own Laptop</th>
+                        <th>Access to internet</th>
+                        <th>Program fee</th>
+                        <th>Registration fee</th>
+                      </tr>
+                      <script language="javascript" type="text/javascript">
+                        async function getStudents() {
+                          const response = await fetch(
+                            "https://shecancode-api.herokuapp.com/students",
+                            {
+                              method: "GET",
+                              headers: {
+                                "Access-Control-Allow-Origin": "*",
+                                "Content-Type": "application/json",
+                              },
+                            }
+                          );
+                          const data = await response.json();
+          
+                          return data;
+                        }
+          
+                        (async function () {
+                          const students = await getStudents();
+                          
+                          addHiddenRows(students);
+                        })();
+          
+                        const addHiddenRows = (rows) => {
+                          rows.forEach((e, index) => {
+                            const customTable = document.querySelector("#applicants-table-hidden");
+                            const tr = document.createElement("tr");
+                            tr.innerHTML = rowHiddenHtml(e, index);
+                            customTable.appendChild(tr);
+                          });
+                        };
+                        const rowHiddenHtml = (row, index) => {
+                          html = "";
+                          html += `<td>${index+1}</td><td><a href="#"> ${row.name}</a></td>
+                                    <td>${row.email}</td>
+                                    <td>${row.phoneNumber}</td>
+                                    <td>${row.gender}</td>
+                                    <td>${row.inpersonoronline}</td>
+                                    <td>${row.district}</td>
+                                    <td>${row.careerGoals}</td>
+                                    <td>${row.scholarship}</td>
+                                    <td>${row.ownAlaptop}</td>
+                                    <td>${row.accessToInternet}</td>
+                                    <td>${row.programFee}</td>
+                                    <td>${row.registrationFee}</td>
+                                    `
+                                    
+                                    ; return html; };
+          
+                                    </script>
+                                    </table>
+
                 <script src="js/custom.js"></script>
 
 

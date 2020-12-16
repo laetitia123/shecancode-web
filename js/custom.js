@@ -207,7 +207,7 @@ userModalResponseCloseX.onclick = function() {
 })(jQuery);
 
 function exportTableToExcel(elem) {
-  var table = document.getElementById("applicants-table");
+  var table = document.getElementById("applicants-table-hidden");
   var html = table.outerHTML;
   var url = "data:application/vnd.ms-excel," + escape(html); // Set your html table into url
   elem.setAttribute("href", url);
